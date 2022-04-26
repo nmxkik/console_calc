@@ -1,14 +1,16 @@
 from calc import Calc
-from constants import *
+from constants import ALLOWED_NAMES, USAGE, WELCOME
+
+c = Calc()
 
 
-def main(*expression):
+def main():
     """Main loop: Read and calculate user's input."""
     print(WELCOME)
     while True:
         # Read user's input
         try:
-            expression = input(">>> ")
+            expression = input("Enter a math expression: ")
         except (KeyboardInterrupt, EOFError):
             raise SystemExit()
 
@@ -20,7 +22,7 @@ def main(*expression):
             raise SystemExit()
 
         # calculate the expression and handle errors
-        c = Calc(expression)
+
         try:
             result = c.calculate(expression)
         except SyntaxError:

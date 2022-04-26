@@ -3,9 +3,6 @@ from constants import *
 
 class Calc():
 
-    def __init__(self, expression):
-        self.expression = expression
-
     def calculate(self, expression):
         """Evaluate a math expression."""
         # Compile the expression eventually raising a SyntaxError
