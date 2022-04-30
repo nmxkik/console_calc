@@ -8,6 +8,9 @@ c = Calc()
 def clearConsole(): return print('\n' * 150)
 
 
+clearConsole()
+
+
 def main():
     """Main loop: Read and calculate user's input."""
     print(WELCOME)
