@@ -5,9 +5,11 @@ ALLOWED_NAMES = {
 }
 
 WELCOME = f"""
-Enter a valid math expression after the prompt ">>>".
+Enter a valid math expression after the prompt "Enter a math expression.".
 Type "help" for more information.
 Type "quit" or "exit" to exit.
+Type "history" to see previous operations.
+Type "clear" to delete history.
 """
 
 USAGE = f"""
