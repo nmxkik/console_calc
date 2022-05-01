@@ -2,14 +2,13 @@ from calc import Calc
 from constants import ALLOWED_NAMES, USAGE, WELCOME
 from calculation_history import History
 
-c = Calc()
-
 
 def clear_сonsole():
     print('\n' * 150)
 
 
 def main():
+    c = Calc()
     clear_сonsole()
     """Main loop: Read and calculate user's input."""
     print(WELCOME)
