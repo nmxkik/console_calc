@@ -1,28 +1,26 @@
 import csv
 
-headerlist = ["№", "request", "answer"]
-
 
 class History():
 
-    def refresh_csv_file():
+    def create_calculation_history_csv_with_headers():
         with open("calculation_history.csv", "wt", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(headerlist)
+            writer.writerow(["№", "request", "answer"])
 
-    def write_answer_in_file(answer):
+    def write_line_in_calculation_history_csv(answer):
         with open("calculation_history.csv", "a", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(answer)
 
-    def count_lines_in_csv():
-        lines = 0
+    def get_nomber_of_lines():
+        number = 0
         with open("calculation_history.csv", "r") as f:
             for line in f:
-                lines += 1
-            return(lines)
+                number += 1
+            return(number)
 
-    def read_history_file():
+    def get_calculation_history():
         with open("calculation_history.csv", "r") as f:
             history_reader = csv.reader(f)
             for row in history_reader:
